@@ -1,0 +1,29 @@
+{
+  "name": "is-text-file",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "type": "commonjs",
+  "description": "Determines whether a filename is plain-text based on a curated list of known extensions.",
+  "imports": {
+    "path": {
+      "bare": "bare-path",
+      "default": "path"
+    }
+  },
+  "scripts": {
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "bare-path": "^3.0.0",
+    "text-file-extensions": "github:holepunchto/text-file-extensions"
+  },
+  "devDependencies": {
+    "brittle": "^3.19.1",
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^1.0.0"
+  },
+  "license": "Apache-2.0"
+}
