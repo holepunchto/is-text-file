@@ -16,7 +16,7 @@ const isTextFile = require('is-text-file')
 
 ```js
 isTextFile('readme.txt') // true
-isTextFile('Dockerfile') // true
+isTextFile('/tmp/Dockerfile') // true
 isTextFile('.gitignore') // true
 
 isTextFile('image.png') // false

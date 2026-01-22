@@ -7,7 +7,7 @@ test('text files', function (t) {
   t.ok(isTextFile('README.MD'))
   t.ok(isTextFile('.gitignore'))
   t.ok(isTextFile('Dockerfile'))
-  t.ok(isTextFile('src/index.js'))
+  t.ok(isTextFile('/tmp/index.js'))
   t.ok(isTextFile('.GITIGNORE'))
   t.ok(isTextFile('MAKEFILE'))
 })
