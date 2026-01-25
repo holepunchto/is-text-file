@@ -6,10 +6,9 @@ function isTextFile(filename) {
   const base = filename.trim().replaceAll('\\', '/').split('/').pop()
   if (!base) return false
   const lower = base.toLowerCase()
-  if (knownTextFiles.has(lower)) return true
   const lastDot = lower.lastIndexOf('.')
-  if (lastDot <= 0 || lastDot === lower.length - 1) return false
-  return knownTextFiles.has(lower.slice(lastDot))
+  const extension = lastDot === -1 ? '' : lower.slice(lastDot)
+  return knownTextFiles.has(lower) || knownTextFiles.has(extension)
 }
 
 module.exports = isTextFile
