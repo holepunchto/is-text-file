@@ -15,6 +15,7 @@ test('True heuristic', function (t) {
   t.ok(isTextFile('makefile'))
   t.ok(isTextFile(' README.md '))
   t.ok(isTextFile('/tmp/abc/Makefile'))
+  t.ok(isTextFile('C:\\tmp\\abc\\Makefile'))
 })
 
 test('False heuristic', function (t) {
