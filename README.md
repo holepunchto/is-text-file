@@ -6,10 +6,6 @@
 npm install is-text-file
 ```
 
-- List from [known-text-files](https://github.com/holepunchto/known-text-files)
-- Case-insensitive
-- POSIX and Windows-style paths
-
 ## Usage
 
 ```js
@@ -28,6 +24,10 @@ isTextFile('image.png')
 isTextFile('foobar')
 isTextFile('.git')
 ```
+
+- File list from [known-text-files](https://github.com/holepunchto/known-text-files)
+- POSIX and Windows-style paths
+- Case-insensitive
 
 ## License
 
