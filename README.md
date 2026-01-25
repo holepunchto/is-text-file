@@ -1,16 +1,16 @@
 # is-text-file
 
-> Determines whether a filename is plain-text based on a unified list of extensions, filenames and dotfiles
-
-Based on the list from [known-text-files](https://github.com/holepunchto/known-text-files).
+> Determines whether a filename is plain text using heuristics based on extensions, filenames, and dotfiles
 
 ```
 npm install is-text-file
 ```
 
+## Features
+
+- Based on [known-text-files](https://github.com/holepunchto/known-text-files)
 - Case-insensitive
 - POSIX and Windows-style paths
-- Heuristics via extensions, common filenames, and dotfiles
 
 ## Usage
 
