@@ -1,5 +1,5 @@
 'use strict'
-const extensions = new Set(require('known-text-files'))
+const knownTextFiles = new Set(require('known-text-files'))
 
 module.exports = function isTextFile(filename) {
   if (typeof filename !== 'string') return false
@@ -15,5 +15,5 @@ module.exports = function isTextFile(filename) {
     : base.startsWith('.')
       ? base.slice(1)
       : base
-  return extensions.has(name.toLowerCase())
+  return knownTextFiles.has(name.toLowerCase())
 }
