@@ -6,7 +6,7 @@
 npm install is-text-file
 ```
 
-- Database from [known-text-files](https://github.com/holepunchto/known-text-files)
+- List from [known-text-files](https://github.com/holepunchto/known-text-files)
 - Case-insensitive
 - POSIX and Windows-style paths
 
