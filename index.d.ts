@@ -1,5 +1,5 @@
 /**
- * Determines whether a filename is plain-text based on a curated list of known extensions.
+ * Determines whether a filename is plain-text based on a unified list of extensions, filenames and dotfiles.
  */
 declare function isTextFile(filename: string): boolean
 
