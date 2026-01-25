@@ -1,6 +1,5 @@
 /**
- * Determines whether a filename is plain text using heuristics based on extensions, extensionless files, and dotfiles.
- * Extensions are checked with a leading dot, while filenames and dotfiles are matched directly.
+ * Determines whether a filename is plain text using heuristics based on extensions, common filenames, and dotfiles.
  */
 declare function isTextFile(filename: string): boolean
 

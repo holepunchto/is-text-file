@@ -1,6 +1,6 @@
 # is-text-file
 
-> Determines whether a filename is plain text using heuristics based on extensions, extensionless files, and dotfiles
+> Determines whether a filename is plain text using heuristics based on extensions, common filenames, and dotfiles
 
 ```
 npm install is-text-file
