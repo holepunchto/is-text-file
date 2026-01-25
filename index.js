@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-const extensions = new Set(require('text-file-extensions'))
+const extensions = new Set(require('known-text-files'))
 
 module.exports = function isTextFile(filename) {
   if (typeof filename !== 'string') return false

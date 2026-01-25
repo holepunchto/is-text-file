@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "bare-path": "^3.0.0",
-    "text-file-extensions": "github:holepunchto/text-file-extensions"
+    "known-text-files": "github:holepunchto/known-text-files"
   },
   "devDependencies": {
     "brittle": "^3.19.1",

@@ -2,7 +2,7 @@
 
 > Determines whether a filename is plain-text based on a curated list of known extensions
 
-Based on [text-file-extensions](https://github.com/holepunchto/text-file-extensions).
+Based on the list from [known-text-files](https://github.com/holepunchto/known-text-files).
 
 ```
 npm install is-text-file
