@@ -2,21 +2,27 @@
 const test = require('brittle')
 const isTextFile = require('.')
 
-test('Heuristic plain text', function (t) {
-  t.ok(isTextFile('readme.txt'))
+test('Text heuristic', function (t) {
+  t.ok(isTextFile('foobar.txt'))
+  t.ok(isTextFile('README.md'))
   t.ok(isTextFile('README.MD'))
+  t.ok(isTextFile(' README.MD '))
   t.ok(isTextFile('.gitignore'))
   t.ok(isTextFile('Dockerfile'))
   t.ok(isTextFile('/tmp/index.js'))
+  t.ok(isTextFile('C:\\tmp\\readme.txt'))
   t.ok(isTextFile('.GITIGNORE'))
-  t.ok(isTextFile('MAKEFILE'))
+  t.ok(isTextFile('makefile'))
 })
 
-test('Heuristic binary files', function (t) {
-  t.ok(!isTextFile('image.png'))
+test('Binary heuristic ', function (t) {
+  t.ok(!isTextFile('foobar.png'))
+  t.ok(!isTextFile('a.pdf'))
   t.ok(!isTextFile('archive.tar.gz'))
   t.ok(!isTextFile('file.'))
   t.ok(!isTextFile('bin'))
+  t.ok(!isTextFile('a.out'))
+  t.ok(!isTextFile('C:\\tmp\\foobar.png'))
   t.ok(!isTextFile('.git'))
   t.ok(!isTextFile(''))
   t.ok(!isTextFile(undefined))

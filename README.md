@@ -8,6 +8,10 @@ Based on the list from [known-text-files](https://github.com/holepunchto/known-t
 npm install is-text-file
 ```
 
+- Case-insensitive
+- POSIX and Windows-style paths
+- Heuristics via extensions, common filenames, and dotfiles
+
 ## Usage
 
 ```js
@@ -23,8 +27,6 @@ isTextFile('image.png') // false
 isTextFile('bin') // false
 isTextFile('.git') // false
 ```
-
-(Case-insensitive)
 
 ## License
 
