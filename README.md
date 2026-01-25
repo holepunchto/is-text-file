@@ -1,6 +1,6 @@
 # is-text-file
 
-> Determines whether a filename is plain-text based on a curated list of known extensions
+> Determines whether a filename is plain-text based on a unified list of extensions, filenames and dotfiles
 
 Based on the list from [known-text-files](https://github.com/holepunchto/known-text-files).
 
@@ -21,6 +21,7 @@ isTextFile('.gitignore') // true
 
 isTextFile('image.png') // false
 isTextFile('bin') // false
+isTextFile('.git') // false
 ```
 
 (Case-insensitive)

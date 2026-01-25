@@ -5,19 +5,12 @@
   "types": "index.d.ts",
   "type": "commonjs",
   "description": "Determines whether a filename is plain-text based on a curated list of known extensions.",
-  "imports": {
-    "path": {
-      "bare": "bare-path",
-      "default": "path"
-    }
-  },
   "scripts": {
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "test": "node test.js"
   },
   "dependencies": {
-    "bare-path": "^3.0.0",
     "known-text-files": "github:holepunchto/known-text-files"
   },
   "devDependencies": {
