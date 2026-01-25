@@ -2,28 +2,32 @@
 const test = require('brittle')
 const isTextFile = require('.')
 
-test('Text heuristic', function (t) {
+test('True heuristic', function (t) {
   t.ok(isTextFile('foobar.txt'))
-  t.ok(isTextFile('README.md'))
+  t.ok(isTextFile('readme.md'))
   t.ok(isTextFile('README.MD'))
-  t.ok(isTextFile(' README.MD '))
+  t.ok(isTextFile(' README.md '))
   t.ok(isTextFile('.gitignore'))
+  t.ok(isTextFile('/tmp/.gitignore'))
+  t.ok(isTextFile('.env.local'))
   t.ok(isTextFile('Dockerfile'))
   t.ok(isTextFile('/tmp/index.js'))
   t.ok(isTextFile('C:\\tmp\\readme.txt'))
   t.ok(isTextFile('.GITIGNORE'))
+  t.ok(isTextFile('/tmp/abc/makefile'))
   t.ok(isTextFile('makefile'))
 })
 
-test('Binary heuristic ', function (t) {
+test('False heuristic', function (t) {
   t.ok(!isTextFile('foobar.png'))
   t.ok(!isTextFile('a.pdf'))
   t.ok(!isTextFile('archive.tar.gz'))
   t.ok(!isTextFile('file.'))
   t.ok(!isTextFile('bin'))
-  t.ok(!isTextFile('a.out'))
+  t.ok(!isTextFile('foobar'))
   t.ok(!isTextFile('C:\\tmp\\foobar.png'))
   t.ok(!isTextFile('.git'))
+  t.ok(!isTextFile('/tmp/.git'))
   t.ok(!isTextFile(''))
   t.ok(!isTextFile(undefined))
   t.ok(!isTextFile(null))

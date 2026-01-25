@@ -1,14 +1,12 @@
 # is-text-file
 
-> Determines whether a filename is plain text using heuristics based on extensions, filenames, and dotfiles
+> Determines whether a filename is plain text using heuristics based on extensions, extensionless files, and dotfiles
 
 ```
 npm install is-text-file
 ```
 
-## Features
-
-- Based on [known-text-files](https://github.com/holepunchto/known-text-files)
+- Database from [known-text-files](https://github.com/holepunchto/known-text-files)
 - Case-insensitive
 - POSIX and Windows-style paths
 
@@ -19,13 +17,16 @@ const isTextFile = require('is-text-file')
 ```
 
 ```js
-isTextFile('readme.txt') // true
-isTextFile('/tmp/Dockerfile') // true
-isTextFile('.gitignore') // true
+// true
+isTextFile('readme.txt')
+isTextFile('/tmp/Dockerfile')
+isTextFile('C:\\tmp\\readme.txt')
+isTextFile('.gitignore')
 
-isTextFile('image.png') // false
-isTextFile('bin') // false
-isTextFile('.git') // false
+// false
+isTextFile('image.png')
+isTextFile('foobar')
+isTextFile('.git')
 ```
 
 ## License
