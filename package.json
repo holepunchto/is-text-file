@@ -8,10 +8,10 @@
   "scripts": {
     "lint": "prettier --check .",
     "format": "prettier --write .",
-    "test": "node test.js"
+    "test": "brittle test.js"
   },
   "dependencies": {
-    "known-text-files": "github:holepunchto/known-text-files"
+    "known-text-files": "^1.0.0"
   },
   "devDependencies": {
     "brittle": "^3.19.1",
