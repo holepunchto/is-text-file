@@ -16,6 +16,10 @@ test('True heuristic', function (t) {
   t.ok(isTextFile(' README.md '))
   t.ok(isTextFile('/tmp/abc/Makefile'))
   t.ok(isTextFile('C:\\tmp\\abc\\Makefile'))
+  t.ok(isTextFile('pear://runtime/foo.txt'))
+  t.ok(isTextFile('pear://runtime/path/Makefile'))
+  t.ok(isTextFile('pear://runtime/path/.env'))
+  t.ok(isTextFile('file:///usr/local/README.md'))
 })
 
 test('False heuristic', function (t) {
@@ -28,6 +32,9 @@ test('False heuristic', function (t) {
   t.ok(!isTextFile('C:\\tmp\\foobar.png'))
   t.ok(!isTextFile('.git'))
   t.ok(!isTextFile('/tmp/.git'))
+  t.ok(!isTextFile('pear://runtime/foo.png'))
+  t.ok(!isTextFile('pear://runtime/binwalk'))
+  t.ok(!isTextFile('file:///usr/local/archive.tar.gz'))
   t.ok(!isTextFile(''))
   t.ok(!isTextFile(undefined))
   t.ok(!isTextFile(null))
