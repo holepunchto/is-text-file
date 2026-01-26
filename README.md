@@ -18,6 +18,7 @@ isTextFile('readme.txt')
 isTextFile('/tmp/Dockerfile')
 isTextFile('C:\\tmp\\readme.txt')
 isTextFile('.gitignore')
+isTextFile('pear://runtime/readme.txt')
 
 // false
 isTextFile('image.png')
