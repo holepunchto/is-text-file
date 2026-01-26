@@ -1,6 +1,6 @@
 /**
- * Determines whether a filename is plain text using heuristics based on extensions, common filenames, and dotfiles.
+ * Determines whether a file specifier is plain text using heuristics based on extensions, common filenames, and dotfiles.
  */
-declare function isTextFile(filename: string): boolean
+declare function isTextFile(specifier: string): boolean
 
 export = isTextFile

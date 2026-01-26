@@ -4,7 +4,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "commonjs",
-  "description": "Determines whether a filename is plain text using heuristics based on extensions, common filenames, and dotfiles",
+  "description": "Determines whether a file specifier is plain text using heuristics based on extensions, common filenames, and dotfiles",
   "scripts": {
     "lint": "prettier --check .",
     "format": "prettier --write .",
