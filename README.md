@@ -1,15 +1,15 @@
-# is-text-file
+# is-text-filetype
 
 > Determines whether a file specifier is plain text using heuristics based on extensions, common filenames, and dotfiles
 
 ```
-npm install is-text-file
+npm install is-text-filetype
 ```
 
 ## Usage
 
 ```js
-const isTextFile = require('is-text-file')
+const isTextFile = require('is-text-filetype')
 ```
 
 ```js
